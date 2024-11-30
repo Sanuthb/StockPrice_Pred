@@ -9,13 +9,16 @@ To start, clone the repository from GitHub to your local machine:
 
 ```bash
 git clone https://github.com/Sanuthb/StockPrice_Pred.git
+cd StockPrice_Pred
 ```
 
 <h4>2. Create a Virtual Environment</h4>
 Set up a Python virtual environment to manage dependencies:
 
 ```bash
-python3 -m venv venv or python -m venv venv
+python3 -m venv venv # if your system have python3 installed
+or
+python -m venv venv
 source ./venv/bin/activate  # For Linux/Mac
 .\venv\Scripts\activate     # For Windows
 ```
