@@ -8,7 +8,7 @@
 To start, clone the repository from GitHub to your local machine:
 
 ```bash
-git clone 
+git clone https://github.com/Sanuthb/StockPrice_Pred.git
 ```
 
 <h4>2. Create a Virtual Environment</h4>
