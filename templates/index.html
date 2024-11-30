@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1 class="title">Stock Analysis</h1>
+    <div class="container">
+      <div class="leftcontainer">
+        <h2>Stock Predictions for Popular Stocks</h2>
+        <button id="fetch-stocks">Fetch Stock Data</button>
+        <div id="loading3">
+            <div id="loadingindicator"></div>
+        </div>
+        <div id="stock-container">
+          <!-- Tables for each stock will be added dynamically -->
+        </div>
+      </div>
+      <div class="rightcontainer">
+        <!-- Predict Stock Prices -->
+        <form id="predict-form">
+          <h2>Predict Stock Prices</h2>
+          <label for="predict-ticker">Enter Stock Ticker:</label>
+          <input
+            type="text"
+            id="predict-ticker"
+            name="ticker"
+            placeholder="e.g., AAPL"
+            required
+          />
+
+          <label for="predict-start">Start Date:</label>
+          <input type="date" id="predict-start" name="start" required />
+
+          <label for="predict-end">End Date:</label>
+          <input type="date" id="predict-end" name="end" />
+
+          <button type="submit">Predict</button>
+        </form>
+        <div id="loading">
+            <div id="loadingindicator"></div>
+        </div>
+        <canvas id="stockChart"></canvas>
+
+        <!-- Recommend Buy/Sell/Hold -->
+        <form id="recommend-form">
+          <h2>Get Stock Recommendation</h2>
+          <label for="recommend-ticker">Enter Stock Ticker:</label>
+          <input
+            type="text"
+            id="recommend-ticker"
+            name="ticker"
+            placeholder="e.g., AAPL"
+            required
+          />
+
+          <label for="recommend-start">Start Date:</label>
+          <input type="date" id="recommend-start" name="start" required />
+
+          <label for="recommend-end">End Date:</label>
+          <input type="date" id="recommend-end" name="end" />
+
+          <button type="submit">Recommend</button>
+        </form>
+        <div id="loading2">
+            <div id="loadingindicator"></div>
+        </div>
+        <div id="result">
+          <!-- Recommendation result will appear here -->
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
